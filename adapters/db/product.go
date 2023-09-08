@@ -17,7 +17,7 @@ func (p *ProductDb) Get(id string) (application.ProductInterface, error) {
 		return nil, err
 	}
 
-	err = stmt.QueryRow(id).Scan(&product.ID, &product.Name, &product.Price, &product.Status)
+	err = stmt.QueryRow(id).Scan(&product.ID, &product.Name, &product.Status, &product.Price)
 	if err != nil {
 		return nil, err
 	}
