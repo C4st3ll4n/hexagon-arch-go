@@ -209,9 +209,9 @@ func (mr *MockProductServiceInterfaceMockRecorder) Enable(product interface{}) *
 }
 
 // FindOne mocks base method.
-func (m *MockProductServiceInterface) FindOne(id string) (application.ProductInterface, error) {
+func (m *MockProductServiceInterface) Get(id string) (application.ProductInterface, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "FindOne", id)
+	ret := m.ctrl.Call(m, "Get", id)
 	ret0, _ := ret[0].(application.ProductInterface)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
@@ -220,7 +220,7 @@ func (m *MockProductServiceInterface) FindOne(id string) (application.ProductInt
 // FindOne indicates an expected call of FindOne.
 func (mr *MockProductServiceInterfaceMockRecorder) FindOne(id interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "FindOne", reflect.TypeOf((*MockProductServiceInterface)(nil).FindOne), id)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Get", reflect.TypeOf((*MockProductServiceInterface)(nil).Get), id)
 }
 
 // MockProductInterface is a mock of ProductInterface interface.

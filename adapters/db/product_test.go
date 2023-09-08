@@ -50,7 +50,7 @@ func TestProductDb_Get(t *testing.T) {
 
 	require.Nil(t, err)
 	require.Equal(t, "Product", product.GetName())
-	require.Equal(t, 0, product.GetPrice())
+	require.Equal(t, 0.0, product.GetPrice())
 	require.Equal(t, "disabled", product.GetStatus())
 }
 

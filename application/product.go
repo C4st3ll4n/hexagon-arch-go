@@ -21,7 +21,7 @@ type ProductPersistenceInterface interface {
 
 type ProductServiceInterface interface {
 	Create(name string, price float64) (ProductInterface, error)
-	FindOne(id string) (ProductInterface, error)
+	Get(id string) (ProductInterface, error)
 	Enable(product ProductInterface) (ProductInterface, error)
 	Disable(product ProductInterface) (ProductInterface, error)
 }
