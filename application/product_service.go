@@ -4,6 +4,11 @@ type ProductService struct {
 	Persistence ProductPersistenceInterface
 }
 
+func (s *ProductService) Update(product ProductInterface) (ProductInterface, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
 func NewProductService(persistenceInterface ProductPersistenceInterface) *ProductService {
 	return &ProductService{Persistence: persistenceInterface}
 }

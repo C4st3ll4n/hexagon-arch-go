@@ -24,6 +24,7 @@ type ProductServiceInterface interface {
 	Get(id string) (ProductInterface, error)
 	Enable(product ProductInterface) (ProductInterface, error)
 	Disable(product ProductInterface) (ProductInterface, error)
+	Update(product ProductInterface) (ProductInterface, error)
 }
 
 func init() {
